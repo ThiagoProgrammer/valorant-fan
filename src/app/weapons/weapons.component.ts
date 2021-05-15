@@ -10,12 +10,19 @@ export class WeaponsComponent implements OnInit {
 
   constructor(private weaponService: WeaponService) { }
   weapons: any;
+  isLoading: boolean;
   ngOnInit(): void {
     this.getAllWeapons();
   }
   async getAllWeapons(){
-    const resp: any = await this.weaponService.getAllWeapons();
-    this.weapons = resp.data;
-   console.log(this.weapons)
+    this.isLoading = true;
+    try {
+      const resp: any = await this.weaponService.getAllWeapons();
+      this.weapons = resp.data;
+      this.isLoading=false;
+    } catch (error) {
+      
+    }
+
    }
 }

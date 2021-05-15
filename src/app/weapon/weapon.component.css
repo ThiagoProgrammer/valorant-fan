@@ -1,0 +1,10 @@
+.card{
+    border-radius: 1rem;
+    background-color:rgba(255, 255, 255, 0.527);
+}
+.btn-back .btn{
+    border-radius: 2rem;
+}
+.img-card{
+    max-height: 150px;
+}
