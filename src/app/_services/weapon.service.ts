@@ -11,4 +11,9 @@ export class WeaponService {
       .get(`${environment.apiUrl}/weapons?language=pt-BR`)
       .toPromise();
   }
+  getWeaponDetails(id){
+    return this.http
+    .get(`${environment.apiUrl}/weapons/${id}?language=pt-BR`)
+    .toPromise();
+  }
 }
