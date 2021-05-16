@@ -8,3 +8,8 @@
 .img-card{
     max-height: 150px;
 }
+@media (max-width:768px){
+    .img-weapon{
+        width:100%;
+    }
+}

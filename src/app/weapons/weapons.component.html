@@ -1,16 +1,20 @@
 <div class="main">
-    <div class="btn-back">
-        <a class="btn btn-danger text-white m-3" [routerLink]="['/']"> <i class="fas fa-angle-double-left"></i> Voltar </a>
-    </div>
-  <div class="container">
-    <h1 class="text-white text-center m-5">Armas Valorant</h1>
-    <div
-      *ngIf="isLoading"
-      class="d-flex justify-content-center align-items-center"
-      style="height: 70vh"
-    >
-    <img src="../../assets/loading2.gif" width="500px" alt="">
-    </div>
+  <div class="btn-back">
+    <a class="btn btn-danger text-white m-3" [routerLink]="['/']">
+      <i class="fas fa-angle-double-left"></i> Voltar
+    </a>
+  </div>
+  <div
+    *ngIf="isLoading"
+    class="d-flex justify-content-center align-items-center"
+    style="height: 70vh"
+  >
+    <img src="../../assets/loading2.gif" width="500px" alt="" />
+  </div>
+  <div *ngIf="!isLoading" class="container">
+    <h1 class="text-white text-center m-5 display-4">Armas Valorant</h1>
+    <hr class="hr" />
+
     <div class="row">
       <div class="col-md-4" *ngFor="let weapon of weapons; let i = index">
         <div class="card col-md-12 mb-5" style="width: 100%; height: 310px">
@@ -31,7 +35,11 @@
             >
               Preço: {{ weapon.shopData.cost }}.
             </p>
-            <a class="btn btn-danger btn-block" [routerLink]="['/weapon', weapon.uuid]">Ver mais detalhes </a>
+            <a
+              class="btn btn-danger btn-block"
+              [routerLink]="['/weapon', weapon.uuid]"
+              >Ver mais detalhes
+            </a>
           </div>
         </div>
       </div>

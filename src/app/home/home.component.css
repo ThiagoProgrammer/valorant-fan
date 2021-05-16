@@ -7,3 +7,16 @@ background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, F
 .h1-color{
     text-decoration: underline rgb(66, 17, 17);
 }
+@media(max-width:768px){
+    .img-home{
+        width:100%;
+        padding-left:3rem;
+        padding-right: 3rem;
+    }
+    .text-home{
+        font-size: 22px;
+    }
+  .div-home{
+      flex-direction: column;
+  }
+}

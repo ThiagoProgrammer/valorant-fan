@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="btn-back">
+    <a class="btn btn-danger text-white m-3" [routerLink]="['/maps']">
+      <i class="fas fa-angle-double-left"></i> Voltar
+    </a>
+  </div>
+  <div
+    *ngIf="isLoading"
+    class="d-flex justify-content-center align-items-center"
+    style="height: 70vh"
+  >
+    <img src="../../assets/loading3.gif" width="250px" alt="" />
+  </div>
+  <div *ngIf="!isLoading" class="contain">
+    <h1 class="text-center text-white display-4 m-5">{{ map.displayName }}</h1>
+    <div class="d-flex justify-content-center map-behind">
+      <div class="container">
+        <img class="p-4 img-map" src="{{ map.splash }}" width="100%" alt="" />
+      </div>
+    </div>
+
+    <h3 class="text-center text-white m-5">
+      Coordenadas: <br />{{ map.coordinates }}
+    </h3>
+  </div>
+</div>

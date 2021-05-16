@@ -8,6 +8,8 @@ import { WeaponsComponent } from './weapons/weapons.component';
 import { WeaponComponent } from './weapon/weapon.component';
 import { AgentsComponent } from './agents/agents.component';
 import { AgentComponent } from './agent/agent.component';
+import { MapsComponent } from './maps/maps.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AgentComponent } from './agent/agent.component';
     WeaponsComponent,
     WeaponComponent,
     AgentsComponent,
-    AgentComponent
+    AgentComponent,
+    MapsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

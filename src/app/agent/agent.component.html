@@ -1,29 +1,48 @@
 <div class="main">
-
-    <h1 class="text-white m-5 text-center display-4">{{agent.displayName}}</h1>
-
+  <div class="btn-back">
+    <a class="btn btn-danger text-white m-3" [routerLink]="['/agents']">
+      <i class="fas fa-angle-double-left"></i> Voltar
+    </a>
+  </div>
+  <div
+    *ngIf="isLoading"
+    class="d-flex justify-content-center align-items-center"
+    style="height: 70vh"
+  >
+    <img src="../../assets/loading.gif" width="300px" alt="" />
+  </div>
+  <div *ngIf="!isLoading" class="contain">
+    <h1 class="text-white m-5 text-center display-4">
+      {{ agent.displayName }}
+    </h1>
 
     <div class="d-flex justify-content-center agent-behind">
-        <img class="img-card p-4 m-4" src="{{ agent.displayIcon }}" width="300px" alt="Card image cap" />
+      <img
+        class="img-card p-4 m-4"
+        src="{{ agent.displayIcon }}"
+        width="300px"
+        alt="Card image cap"
+      />
     </div>
 
     <h3 class="text-center text-white m-5 display-4">Habilidades</h3>
+    <hr class="bg-white mb-5 hr" />
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 " *ngFor="let ability of agent.abilities;let i = index;">
-                <h4 class="text-center text-white mb-5">{{ability.displayName}}</h4>
-                <div class="d-flex justify-content-center">
-                    <img width="150px" src={{ability.displayIcon}}>
-                </div>
-                <p class="text-center text-white mt-4">{{ability.description}}</p>
-            </div>
+      <div class="row mb-5">
+        <div
+          class="col-md-3 mb-5"
+          *ngFor="let ability of agent.abilities; let i = index"
+        >
+          <h4 class="text-center ability-name text-white mb-5">
+            {{ ability.displayName }}
+          </h4>
+          <div class="d-flex justify-content-center">
+            <img width="150px" src="{{ ability.displayIcon }}" />
+          </div>
+          <p class="text-center text-white mt-4">{{ ability.description }}</p>
         </div>
+      </div>
     </div>
-
-
-
-
-
-
+  </div>
 </div>

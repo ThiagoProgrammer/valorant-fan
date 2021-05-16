@@ -1,0 +1,42 @@
+<div class="main">
+  <div class="btn-back">
+    <a class="btn btn-danger text-white m-3" [routerLink]="['/']">
+      <i class="fas fa-angle-double-left"></i> Voltar
+    </a>
+  </div>
+  <div
+    *ngIf="isLoading"
+    class="d-flex justify-content-center align-items-center"
+    style="height: 70vh"
+  >
+    <img src="../../assets/loading3.gif" width="250px" alt="" />
+  </div>
+  <div *ngIf="!isLoading" class="contain">
+    <h1 class="text-white text-center m-5">Mapas Valorant</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let map of maps; let i = index">
+          <div class="card col-md-12 mb-5" style="width: 100%; height: autopx">
+            <div class="d-flex justify-content-center">
+              <img
+                class="img-card p-4"
+                src="{{ map.splash }}"
+                width="100%"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ map.displayName }}</h5>
+              <hr />
+              <a
+                class="btn btn-danger btn-block"
+                [routerLink]="['/map', map.uuid]"
+                >Ver mais detalhes
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
