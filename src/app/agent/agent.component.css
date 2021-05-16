@@ -1,0 +1,15 @@
+.img-card{
+border: 16px solid #dc3545;
+border-radius:1001px;
+background-color:rgb(59, 52, 52);
+}
+.agent-behind{
+    background:url("https://pbs.twimg.com/media/EVplNU2UwAMQP0B.jpg:large");
+    background-size:cover;
+    background-position-y: -502px;
+    
+    
+    border-top: 9px solid black;
+    border-bottom: 9px solid black;
+    
+}

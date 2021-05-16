@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WeaponsComponent } from './weapons/weapons.component';
 import { WeaponComponent } from './weapon/weapon.component';
+import { AgentsComponent } from './agents/agents.component';
+import { AgentComponent } from './agent/agent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WeaponsComponent,
-    WeaponComponent
+    WeaponComponent,
+    AgentsComponent,
+    AgentComponent
   ],
   imports: [
     BrowserModule,
